@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBCM Alliance | Protocol for Public Interest</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #050505; --text: #e0e0e0; --accent: #00ffff; --sub: #666; }
+        body { 
+            background: var(--bg); color: var(--text); 
+            font-family: 'JetBrains Mono', monospace; margin: 0; padding: 0;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            min-height: 100vh; text-align: center;
+        }
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; text-shadow: 0 0 15px rgba(0,255,255,0.3); }
+        .tagline { color: var(--sub); font-size: 0.9rem; margin-bottom: 3rem; letter-spacing: 2px; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; width: 90%; max-width: 900px; }
+        
+        .card {
+            border: 1px solid #333; border-radius: 8px; padding: 25px;
+            transition: all 0.2s; text-decoration: none; color: inherit; background: #111;
+        }
+        .card:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 0 20px rgba(0,255,255,0.1); }
+        .card-title { font-weight: bold; font-size: 1.2rem; color: var(--accent); margin-bottom: 10px; display: block; }
+        .card-desc { font-size: 0.85rem; color: #aaa; line-height: 1.6; }
+        
+        footer { margin-top: 4rem; font-size: 0.7rem; color: #444; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SBCM Alliance</h1>
+        <div class="tagline">ALGORITHMIZING SOCIAL JUSTICE</div>
+    </header>
+
+    <div class="grid">
+        <!-- 1. MAP -->
+        <a href="https://sbcm-alliance.github.io/JAPAN-DISTORTION-MAP/" class="card">
+            <span class="card-title">🌏 GLOBAL SCANNER</span>
+            <span class="card-desc">
+                Administrative Hydraulics Visualizer.<br>
+                都市の「富の漏出」と「歪み」を3D解析する監査システム。
+            </span>
+        </a>
+
+        <!-- 2. SONA -->
+        <a href="https://sbcm-alliance.github.io/sona-battery-link/" class="card">
+            <span class="card-title">🔋 HUNGRY SONA</span>
+            <span class="card-desc">
+                Digital Metabolism Experiment.<br>
+                エネルギー消費とAIの感情を同期させるインターフェース実験。
+            </span>
+        </a>
+
+        <!-- 3. PAPERS (Zenodo/Note) -->
+        <a href="https://github.com/SBCM-Alliance/core-theory" class="card">
+            <span class="card-title">📜 CORE THEORY</span>
+            <span class="card-desc">
+                The Logic.<br>
+                SBCM四部作（方法論・経済学・熱力学・場の方程式）の論文アーカイブ。
+            </span>
+        </a>
+    </div>
+
+    <footer>
+        &copy; 2025 SBCM Alliance. Powered by Public Interestism.
+    </footer>
+
+</body>
+</html>
