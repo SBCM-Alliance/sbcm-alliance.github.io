@@ -1,72 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SBCM Alliance | Protocol for Public Interest</title>
+    <title>SBCM Alliance | Algorithmizing Social Justice</title>
+    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        :root { --bg: #050505; --text: #e0e0e0; --accent: #00ffff; --sub: #666; }
+        :root { 
+            --bg: #050505; 
+            --panel: #111; 
+            --text: #e0e0e0; 
+            --accent: #00ffff; 
+            --meso: #00ff41;
+            --micro: #ff0055;
+            --sub: #666; 
+        }
         body { 
             background: var(--bg); color: var(--text); 
             font-family: 'JetBrains Mono', monospace; margin: 0; padding: 0;
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            display: flex; flex-direction: column; align-items: center; 
             min-height: 100vh; text-align: center;
         }
-        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; text-shadow: 0 0 15px rgba(0,255,255,0.3); }
-        .tagline { color: var(--sub); font-size: 0.9rem; margin-bottom: 3rem; letter-spacing: 2px; }
-        
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; width: 90%; max-width: 900px; }
-        
-        .card {
-            border: 1px solid #333; border-radius: 8px; padding: 25px;
-            transition: all 0.2s; text-decoration: none; color: inherit; background: #111;
+
+        /* HEADER */
+        header { margin-top: 3rem; margin-bottom: 3rem; padding: 0 20px; }
+        h1 { 
+            font-size: 2.5rem; margin-bottom: 0.5rem; 
+            text-shadow: 0 0 20px rgba(0,255,255,0.4); 
+            letter-spacing: -1px;
         }
-        .card:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 0 20px rgba(0,255,255,0.1); }
-        .card-title { font-weight: bold; font-size: 1.2rem; color: var(--accent); margin-bottom: 10px; display: block; }
-        .card-desc { font-size: 0.85rem; color: #aaa; line-height: 1.6; }
+        .tagline { color: var(--sub); font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; }
+
+        /* GRID LAYOUT */
+        .container { width: 90%; max-width: 1000px; margin-bottom: 4rem; }
         
-        footer { margin-top: 4rem; font-size: 0.7rem; color: #444; }
+        .section-label {
+            text-align: left; margin: 30px 0 10px; font-size: 0.8rem; color: #555; border-bottom: 1px solid #222; padding-bottom: 5px;
+        }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+        }
+        
+        /* CARD DESIGN */
+        .card {
+            background: var(--panel); border: 1px solid #333; border-radius: 12px; 
+            padding: 25px; text-decoration: none; color: inherit; 
+            text-align: left; transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative; overflow: hidden;
+            display: flex; flex-direction: column; height: 100%;
+        }
+        
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #333; transition: 0.2s; }
+        .card:hover::before { background: var(--accent); }
+
+        /* Type Colors */
+        .type-meso:hover { border-color: var(--meso); }
+        .type-meso:hover::before { background: var(--meso); }
+        
+        .type-micro:hover { border-color: var(--micro); }
+        .type-micro:hover::before { background: var(--micro); }
+
+        .icon-box { font-size: 1.5rem; margin-bottom: 15px; color: #fff; }
+        .card-title { font-weight: bold; font-size: 1.2rem; margin-bottom: 8px; color: #fff; }
+        .card-desc { font-size: 0.85rem; color: #aaa; line-height: 1.6; flex-grow: 1; }
+        .status { font-size: 0.7rem; margin-top: 15px; color: #555; text-align: right; }
+
+        footer { margin: 2rem 0; font-size: 0.7rem; color: #444; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>SBCM Alliance</h1>
-        <div class="tagline">ALGORITHMIZING SOCIAL JUSTICE</div>
+        <div class="tagline">From Logic to the Heart.</div>
     </header>
 
-    <div class="grid">
-        <!-- 1. MAP -->
-        <a href="https://sbcm-alliance.github.io/JAPAN-DISTORTION-MAP/" class="card">
-            <span class="card-title">🌏 GLOBAL SCANNER</span>
-            <span class="card-desc">
-                Administrative Hydraulics Visualizer.<br>
-                都市の「富の漏出」と「歪み」を3D解析する監査システム。
-            </span>
-        </a>
+    <div class="container">
+        
+        <!-- MACRO LAYER (Audit & Global) -->
+        <div class="section-label">MACRO: GOVERNANCE & AUDIT</div>
+        <div class="grid">
+            <a href="https://sbcm-alliance.github.io/JAPAN-DISTORTION-MAP/" class="card">
+                <div class="icon-box" style="color:var(--accent)"><i class="fas fa-globe-asia"></i></div>
+                <div class="card-title">Global Scanner</div>
+                <div class="card-desc">
+                    Administrative Hydraulics Visualizer.<br>
+                    都市の「富の漏出」と「インフラ効率」を3D解析する行政監査システム。
+                </div>
+                <div class="status">● OPERATIONAL</div>
+            </a>
 
-        <!-- 2. SONA -->
-        <a href="https://sbcm-alliance.github.io/sona-battery-link/" class="card">
-            <span class="card-title">🔋 HUNGRY SONA</span>
-            <span class="card-desc">
-                Digital Metabolism Experiment.<br>
-                エネルギー消費とAIの感情を同期させるインターフェース実験。
-            </span>
-        </a>
+            <a href="https://github.com/SBCM-Alliance/core-theory" class="card">
+                <div class="icon-box" style="color:#aaa"><i class="fas fa-book"></i></div>
+                <div class="card-title">Core Theory</div>
+                <div class="card-desc">
+                    The Logic.<br>
+                    SBCM四部作（方法論・経済学・熱力学・場の方程式）の論文アーカイブ。
+                </div>
+                <div class="status">● PUBLISHED</div>
+            </a>
+        </div>
 
-        <!-- 3. PAPERS (Zenodo/Note) -->
-        <a href="https://github.com/SBCM-Alliance/core-theory" class="card">
-            <span class="card-title">📜 CORE THEORY</span>
-            <span class="card-desc">
-                The Logic.<br>
-                SBCM四部作（方法論・経済学・熱力学・場の方程式）の論文アーカイブ。
-            </span>
-        </a>
+        <!-- MESO LAYER (Economy & Circulation) -->
+        <div class="section-label">MESO: ECONOMY & CIRCULATION</div>
+        <div class="grid">
+            <a href="https://sbcm-alliance.github.io/G-Cart/" class="card type-meso">
+                <div class="icon-box" style="color:var(--meso)"><i class="fas fa-truck-loading"></i></div>
+                <div class="card-title">G-Cart</div>
+                <div class="card-desc">
+                    Virtual General Contractor.<br>
+                    地域循環率($R_{block}$)を最大化する、アルゴリズムによる公共調達システム。
+                </div>
+                <div class="status">● PROTOTYPE</div>
+            </a>
+
+            <a href="https://sbcm-alliance.github.io/Yorbee/" class="card type-meso">
+                <div class="icon-box" style="color:var(--meso)"><i class="fas fa-users-gear"></i></div>
+                <div class="card-title">Yorbee</div>
+                <div class="card-desc">
+                    Ethical Labor Guild.<br>
+                    搾取なき労働市場と、真正な信用スコアを構築する分散型ギルド。
+                </div>
+                <div class="status">● PROTOTYPE</div>
+            </a>
+        </div>
+
+        <!-- MICRO LAYER (Habitat & Life) -->
+        <div class="section-label">MICRO: HABITAT & AGENT</div>
+        <div class="grid">
+            <a href="https://sbcm-alliance.github.io/SONA-OS/" class="card type-micro">
+                <div class="icon-box" style="color:var(--micro)"><i class="fas fa-robot"></i></div>
+                <div class="card-title">SONA-OS</div>
+                <div class="card-desc">
+                    Habitat Navigation Agent.<br>
+                    「熱力学」を「感情」に変換し、居住区の生存と資源管理を支援するマイクロOS。
+                </div>
+                <div class="status">● ONLINE</div>
+            </a>
+
+            <a href="https://sbcm-alliance.github.io/sona-battery-link/" class="card type-micro">
+                <div class="icon-box" style="color:var(--micro)"><i class="fas fa-bolt"></i></div>
+                <div class="card-title">Hungry Sona</div>
+                <div class="card-desc">
+                    Digital Metabolism Exp.<br>
+                    物理バッテリーとAIの感情を同期させるインターフェース実験。
+                </div>
+                <div class="status">● DEMO</div>
+            </a>
+        </div>
+
     </div>
 
     <footer>
-        &copy; 2025 SBCM Alliance. Powered by Public Interestism.
+        &copy; 2025 SBCM Alliance. Powered by Algorithmic Public Interestism.
     </footer>
 
 </body>
