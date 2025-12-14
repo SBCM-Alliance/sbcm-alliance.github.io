@@ -48,30 +48,42 @@
             gap: 20px; 
         }
         
-        /* CARD DESIGN */
+        /* --- CARD DESIGN (Cyber Window) --- */
         .card {
-            background: var(--panel); border: 1px solid #333; border-radius: 12px; 
+            /* Base Design */
+            background-color: var(--panel); 
+            border: 1px solid #333; border-radius: 12px; 
             padding: 25px; text-decoration: none; color: inherit; 
-            text-align: left; transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+            text-align: left; 
             position: relative; overflow: hidden;
             display: flex; flex-direction: column; height: 100%;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            
+            /* Background Image Magic */
+            background-size: cover;
+            background-position: center top;
+            /* 最初は画像を暗く隠す (黒95%のオーバーレイ) */
+            background-image: linear-gradient(rgba(15,15,15,0.95), rgba(15,15,15,0.98));
         }
         
-        .card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #333; transition: 0.2s; }
-        .card:hover::before { background: var(--accent); }
-
-        /* Type Colors */
-        .type-meso:hover { border-color: var(--meso); }
-        .type-meso:hover::before { background: var(--meso); }
+        /* ホバー/タップ時に画像を浮かび上がらせる */
+        .card:hover { 
+            transform: translateY(-5px); 
+            border-color: var(--accent); 
+            box-shadow: 0 10px 40px rgba(0,255,255,0.15);
+            /* 黒を薄くする (黒60%のオーバーレイ) */
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)); 
+        }
         
-        .type-micro:hover { border-color: var(--micro); }
-        .type-micro:hover::before { background: var(--micro); }
+        /* Color Variants for Hover Border */
+        .type-meso:hover { border-color: var(--meso); box-shadow: 0 10px 40px rgba(0,255,65,0.15); }
+        .type-micro:hover { border-color: var(--micro); box-shadow: 0 10px 40px rgba(255,0,85,0.15); }
 
-        .icon-box { font-size: 1.5rem; margin-bottom: 15px; color: #fff; }
-        .card-title { font-weight: bold; font-size: 1.2rem; margin-bottom: 8px; color: #fff; }
-        .card-desc { font-size: 0.85rem; color: #aaa; line-height: 1.6; flex-grow: 1; }
-        .status { font-size: 0.7rem; margin-top: 15px; color: #555; text-align: right; }
+        /* Text Styles (Ensure readability over image) */
+        .icon-box { font-size: 1.5rem; margin-bottom: 15px; color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+        .card-title { font-weight: bold; font-size: 1.2rem; margin-bottom: 8px; color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+        .card-desc { font-size: 0.85rem; color: #ccc; line-height: 1.6; flex-grow: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+        .status { font-size: 0.7rem; margin-top: 15px; color: #aaa; text-align: right; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
 
         footer { margin: 2rem 0; font-size: 0.7rem; color: #444; }
     </style>
@@ -85,10 +97,12 @@
 
     <div class="container">
         
-        <!-- MACRO LAYER (Audit & Global) -->
+        <!-- MACRO LAYER -->
         <div class="section-label">MACRO: GOVERNANCE & AUDIT</div>
         <div class="grid">
-            <a href="https://sbcm-alliance.github.io/JAPAN-DISTORTION-MAP/" class="card">
+            <!-- Global Scanner -->
+            <a href="https://sbcm-alliance.github.io/JAPAN-DISTORTION-MAP/" class="card" 
+               style="background-image: linear-gradient(rgba(15,15,15,0.95), rgba(15,15,15,0.98)), url('https://s0.wp.com/mshots/v1/https%3A%2F%2Fsbcm-alliance.github.io%2FJAPAN-DISTORTION-MAP%2F?w=600');">
                 <div class="icon-box" style="color:var(--accent)"><i class="fas fa-globe-asia"></i></div>
                 <div class="card-title">Global Scanner</div>
                 <div class="card-desc">
@@ -98,7 +112,9 @@
                 <div class="status">● OPERATIONAL</div>
             </a>
 
-            <a href="https://github.com/SBCM-Alliance/core-theory" class="card">
+            <!-- Core Theory -->
+            <a href="https://github.com/SBCM-Alliance/core-theory" class="card"
+               style="background-image: linear-gradient(rgba(15,15,15,0.95), rgba(15,15,15,0.98)), url('https://s0.wp.com/mshots/v1/https%3A%2F%2Fgithub.com%2FSBCM-Alliance%2Fcore-theory?w=600');">
                 <div class="icon-box" style="color:#aaa"><i class="fas fa-book"></i></div>
                 <div class="card-title">Core Theory</div>
                 <div class="card-desc">
@@ -109,10 +125,12 @@
             </a>
         </div>
 
-        <!-- MESO LAYER (Economy & Circulation) -->
+        <!-- MESO LAYER -->
         <div class="section-label">MESO: ECONOMY & CIRCULATION</div>
         <div class="grid">
-            <a href="https://sbcm-alliance.github.io/G-Cart/" class="card type-meso">
+            <!-- G-Cart -->
+            <a href="https://sbcm-alliance.github.io/G-Cart/" class="card type-meso"
+               style="background-image: linear-gradient(rgba(15,15,15,0.95), rgba(15,15,15,0.98)), url('https://s0.wp.com/mshots/v1/https%3A%2F%2Fsbcm-alliance.github.io%2FG-Cart%2F?w=600');">
                 <div class="icon-box" style="color:var(--meso)"><i class="fas fa-truck-loading"></i></div>
                 <div class="card-title">G-Cart</div>
                 <div class="card-desc">
@@ -122,7 +140,9 @@
                 <div class="status">● PROTOTYPE</div>
             </a>
 
-            <a href="https://sbcm-alliance.github.io/Yorbee/" class="card type-meso">
+            <!-- Yorbee -->
+            <a href="https://sbcm-alliance.github.io/Yorbee/" class="card type-meso"
+               style="background-image: linear-gradient(rgba(15,15,15,0.95), rgba(15,15,15,0.98)), url('https://s0.wp.com/mshots/v1/https%3A%2F%2Fsbcm-alliance.github.io%2FYorbee%2F?w=600');">
                 <div class="icon-box" style="color:var(--meso)"><i class="fas fa-users-gear"></i></div>
                 <div class="card-title">Yorbee</div>
                 <div class="card-desc">
@@ -133,10 +153,12 @@
             </a>
         </div>
 
-        <!-- MICRO LAYER (Habitat & Life) -->
+        <!-- MICRO LAYER -->
         <div class="section-label">MICRO: HABITAT & AGENT</div>
         <div class="grid">
-            <a href="https://sbcm-alliance.github.io/SONA-OS/" class="card type-micro">
+            <!-- SONA-OS -->
+            <a href="https://sbcm-alliance.github.io/SONA-OS/" class="card type-micro"
+               style="background-image: linear-gradient(rgba(15,15,15,0.95), rgba(15,15,15,0.98)), url('https://s0.wp.com/mshots/v1/https%3A%2F%2Fsbcm-alliance.github.io%2FSONA-OS%2F?w=600');">
                 <div class="icon-box" style="color:var(--micro)"><i class="fas fa-robot"></i></div>
                 <div class="card-title">SONA-OS</div>
                 <div class="card-desc">
@@ -146,7 +168,9 @@
                 <div class="status">● ONLINE</div>
             </a>
 
-            <a href="https://sbcm-alliance.github.io/sona-battery-link/" class="card type-micro">
+            <!-- Hungry Sona -->
+            <a href="https://sbcm-alliance.github.io/sona-battery-link/" class="card type-micro"
+               style="background-image: linear-gradient(rgba(15,15,15,0.95), rgba(15,15,15,0.98)), url('https://s0.wp.com/mshots/v1/https%3A%2F%2Fsbcm-alliance.github.io%2Fsona-battery-link%2F?w=600');">
                 <div class="icon-box" style="color:var(--micro)"><i class="fas fa-bolt"></i></div>
                 <div class="card-title">Hungry Sona</div>
                 <div class="card-desc">
