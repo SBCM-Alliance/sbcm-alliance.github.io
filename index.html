@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Meta for SEO/Social -->
+    <meta name="description" content="SBCM Alliance: A GovTech consortium redefining governance through Algorithmic Public Interestism.">
+    <meta property="og:title" content="SBCM Alliance">
+    <meta property="og:description" content="From Logic to the Heart. The National OS for the post-growth era.">
     
     <style>
         :root { 
@@ -27,19 +32,20 @@
         }
 
         /* HEADER */
-        header { margin-top: 3rem; margin-bottom: 3rem; padding: 0 20px; }
+        header { margin-top: 4rem; margin-bottom: 3rem; padding: 0 20px; }
         h1 { 
             font-size: 2.5rem; margin-bottom: 0.5rem; 
             text-shadow: 0 0 20px rgba(0,255,255,0.4); 
             letter-spacing: -1px;
         }
-        .tagline { color: var(--sub); font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; }
+        .tagline { color: var(--sub); font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; }
 
         /* GRID LAYOUT */
-        .container { width: 90%; max-width: 1000px; margin-bottom: 4rem; }
+        .container { width: 90%; max-width: 1000px; margin-bottom: 5rem; }
         
         .section-label {
-            text-align: left; margin: 30px 0 10px; font-size: 0.8rem; color: #555; border-bottom: 1px solid #222; padding-bottom: 5px;
+            text-align: left; margin: 40px 0 15px; font-size: 0.75rem; color: #555; 
+            border-bottom: 1px solid #222; padding-bottom: 5px; letter-spacing: 1px;
         }
 
         .grid { 
@@ -52,7 +58,7 @@
         .card {
             /* Base Design */
             background-color: var(--panel); 
-            border: 1px solid #333; border-radius: 12px; 
+            border: 1px solid #333; border-radius: 8px; 
             padding: 25px; text-decoration: none; color: inherit; 
             text-align: left; 
             position: relative; overflow: hidden;
@@ -62,28 +68,28 @@
             /* Background Image Magic */
             background-size: cover;
             background-position: center top;
-            /* 最初は画像を暗く隠す (黒95%のオーバーレイ) */
-            background-image: linear-gradient(rgba(15,15,15,0.95), rgba(15,15,15,0.98));
+            /* Default: Dark Overlay (95%) */
+            background-image: linear-gradient(rgba(10,10,10,0.95), rgba(10,10,10,0.98));
         }
         
-        /* ホバー/タップ時に画像を浮かび上がらせる */
+        /* Hover: Reveal Image */
         .card:hover { 
             transform: translateY(-5px); 
             border-color: var(--accent); 
             box-shadow: 0 10px 40px rgba(0,255,255,0.15);
-            /* 黒を薄くする (黒60%のオーバーレイ) */
-            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)); 
+            /* Reveal: Light Overlay (60%) */
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)); 
         }
         
-        /* Color Variants for Hover Border */
+        /* Color Variants */
         .type-meso:hover { border-color: var(--meso); box-shadow: 0 10px 40px rgba(0,255,65,0.15); }
         .type-micro:hover { border-color: var(--micro); box-shadow: 0 10px 40px rgba(255,0,85,0.15); }
 
-        /* Text Styles (Ensure readability over image) */
+        /* Text Styles */
         .icon-box { font-size: 1.5rem; margin-bottom: 15px; color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
         .card-title { font-weight: bold; font-size: 1.2rem; margin-bottom: 8px; color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
-        .card-desc { font-size: 0.85rem; color: #ccc; line-height: 1.6; flex-grow: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
-        .status { font-size: 0.7rem; margin-top: 15px; color: #aaa; text-align: right; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+        .card-desc { font-size: 0.8rem; color: #ccc; line-height: 1.6; flex-grow: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+        .status { font-size: 0.65rem; margin-top: 15px; color: #aaa; text-align: right; text-shadow: 0 2px 4px rgba(0,0,0,0.8); letter-spacing: 1px; }
 
         footer { margin: 2rem 0; font-size: 0.7rem; color: #444; }
     </style>
@@ -102,24 +108,24 @@
         <div class="grid">
             <!-- Global Scanner -->
             <a href="https://sbcm-alliance.github.io/JAPAN-DISTORTION-MAP/" class="card" 
-               style="background-image: linear-gradient(rgba(15,15,15,0.95), rgba(15,15,15,0.98)), url('https://s0.wp.com/mshots/v1/https%3A%2F%2Fsbcm-alliance.github.io%2FJAPAN-DISTORTION-MAP%2F?w=600');">
+               style="background-image: linear-gradient(rgba(10,10,10,0.95), rgba(10,10,10,0.98)), url('https://s0.wp.com/mshots/v1/https%3A%2F%2Fsbcm-alliance.github.io%2FJAPAN-DISTORTION-MAP%2F?w=600');">
                 <div class="icon-box" style="color:var(--accent)"><i class="fas fa-globe-asia"></i></div>
                 <div class="card-title">Global Scanner</div>
                 <div class="card-desc">
                     Administrative Hydraulics Visualizer.<br>
-                    都市の「富の漏出」と「インフラ効率」を3D解析する行政監査システム。
+                    3D analysis of urban wealth leakage and infrastructure efficiency using OpenStreetMap.
                 </div>
                 <div class="status">● OPERATIONAL</div>
             </a>
 
             <!-- Core Theory -->
             <a href="https://github.com/SBCM-Alliance/core-theory" class="card"
-               style="background-image: linear-gradient(rgba(15,15,15,0.95), rgba(15,15,15,0.98)), url('https://s0.wp.com/mshots/v1/https%3A%2F%2Fgithub.com%2FSBCM-Alliance%2Fcore-theory?w=600');">
+               style="background-image: linear-gradient(rgba(10,10,10,0.95), rgba(10,10,10,0.98)), url('https://s0.wp.com/mshots/v1/https%3A%2F%2Fgithub.com%2FSBCM-Alliance%2Fcore-theory?w=600');">
                 <div class="icon-box" style="color:#aaa"><i class="fas fa-book"></i></div>
                 <div class="card-title">Core Theory</div>
                 <div class="card-desc">
                     The Logic.<br>
-                    SBCM四部作（方法論・経済学・熱力学・場の方程式）の論文アーカイブ。
+                    The fundamental axioms of SBCM (Methodology, Economics, Thermodynamics, and Field Theory).
                 </div>
                 <div class="status">● PUBLISHED</div>
             </a>
@@ -130,24 +136,24 @@
         <div class="grid">
             <!-- G-Cart -->
             <a href="https://sbcm-alliance.github.io/G-Cart/" class="card type-meso"
-               style="background-image: linear-gradient(rgba(15,15,15,0.95), rgba(15,15,15,0.98)), url('https://s0.wp.com/mshots/v1/https%3A%2F%2Fsbcm-alliance.github.io%2FG-Cart%2F?w=600');">
+               style="background-image: linear-gradient(rgba(10,10,10,0.95), rgba(10,10,10,0.98)), url('https://s0.wp.com/mshots/v1/https%3A%2F%2Fsbcm-alliance.github.io%2FG-Cart%2F?w=600');">
                 <div class="icon-box" style="color:var(--meso)"><i class="fas fa-truck-loading"></i></div>
                 <div class="card-title">G-Cart</div>
                 <div class="card-desc">
                     Virtual General Contractor.<br>
-                    地域循環率($R_{block}$)を最大化する、アルゴリズムによる公共調達システム。
+                    Algorithmic public procurement system designed to maximize the regional circulation rate ($R_{block}$).
                 </div>
                 <div class="status">● PROTOTYPE</div>
             </a>
 
             <!-- Yorbee -->
             <a href="https://sbcm-alliance.github.io/Yorbee/" class="card type-meso"
-               style="background-image: linear-gradient(rgba(15,15,15,0.95), rgba(15,15,15,0.98)), url('https://s0.wp.com/mshots/v1/https%3A%2F%2Fsbcm-alliance.github.io%2FYorbee%2F?w=600');">
+               style="background-image: linear-gradient(rgba(10,10,10,0.95), rgba(10,10,10,0.98)), url('https://s0.wp.com/mshots/v1/https%3A%2F%2Fsbcm-alliance.github.io%2FYorbee%2F?w=600');">
                 <div class="icon-box" style="color:var(--meso)"><i class="fas fa-users-gear"></i></div>
                 <div class="card-title">Yorbee</div>
                 <div class="card-desc">
                     Ethical Labor Guild.<br>
-                    搾取なき労働市場と、真正な信用スコアを構築する分散型ギルド。
+                    Decentralized labor market ensuring non-exploitative wages and authentic credit scoring.
                 </div>
                 <div class="status">● PROTOTYPE</div>
             </a>
@@ -158,24 +164,24 @@
         <div class="grid">
             <!-- SONA-OS -->
             <a href="https://sbcm-alliance.github.io/SONA-OS/" class="card type-micro"
-               style="background-image: linear-gradient(rgba(15,15,15,0.95), rgba(15,15,15,0.98)), url('https://s0.wp.com/mshots/v1/https%3A%2F%2Fsbcm-alliance.github.io%2FSONA-OS%2F?w=600');">
+               style="background-image: linear-gradient(rgba(10,10,10,0.95), rgba(10,10,10,0.98)), url('https://s0.wp.com/mshots/v1/https%3A%2F%2Fsbcm-alliance.github.io%2FSONA-OS%2F?w=600');">
                 <div class="icon-box" style="color:var(--micro)"><i class="fas fa-robot"></i></div>
                 <div class="card-title">SONA-OS</div>
                 <div class="card-desc">
                     Habitat Navigation Agent.<br>
-                    「熱力学」を「感情」に変換し、居住区の生存と資源管理を支援するマイクロOS。
+                    A micro-OS that translates "Thermodynamics" into "Empathy" to support resident survival.
                 </div>
                 <div class="status">● ONLINE</div>
             </a>
 
             <!-- Hungry Sona -->
             <a href="https://sbcm-alliance.github.io/sona-battery-link/" class="card type-micro"
-               style="background-image: linear-gradient(rgba(15,15,15,0.95), rgba(15,15,15,0.98)), url('https://s0.wp.com/mshots/v1/https%3A%2F%2Fsbcm-alliance.github.io%2Fsona-battery-link%2F?w=600');">
+               style="background-image: linear-gradient(rgba(10,10,10,0.95), rgba(10,10,10,0.98)), url('https://s0.wp.com/mshots/v1/https%3A%2F%2Fsbcm-alliance.github.io%2Fsona-battery-link%2F?w=600');">
                 <div class="icon-box" style="color:var(--micro)"><i class="fas fa-bolt"></i></div>
                 <div class="card-title">Hungry Sona</div>
                 <div class="card-desc">
                     Digital Metabolism Exp.<br>
-                    物理バッテリーとAIの感情を同期させるインターフェース実験。
+                    Experimental interface synchronizing physical battery levels with AI emotional states.
                 </div>
                 <div class="status">● DEMO</div>
             </a>
